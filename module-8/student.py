@@ -1,4 +1,26 @@
-import json
+try:
+    import json
+except ImportError:
+    print('This program requires the json module, please try it again')
+    json.exit()
+    
+
+"""Define filename"""
+fileName = '../csd325/module-8/student.json'
+
+"""Define New student info"""
+new_student_info = {  
+        "F_Name": 'Weihao', 
+        "L_Name": 'Fu', 
+        "Student_ID": 123456, 
+        "Email": "abcwf@gmail.com" }
+
+def main():
+    Read_Student_File(fileName)
+    print("You have successfully read the file")
+
+    Append_Student_File(fileName, new_student_info)
+    print("You have successfully append the new student to the existing file")
 
 def Read_Student_File(fileName):
 
@@ -22,7 +44,7 @@ def Append_Student_File(fileName, new_student_info):
     """Append new student data"""
     data = Read_Student_File(fileName)
     data.append(new_student_info)
-    print (f'This is the updated Student list{data}')
+    print (f'This is the updated Student list: \n{data}')
 
     """Write the updated data into the file"""
     try:
@@ -36,18 +58,10 @@ def Append_Student_File(fileName, new_student_info):
 
 
 if __name__ == '__main__':
-    """Define filename"""
-    fileName = '../csd325/module-8/student.json'
+    try:
+        main()
+    except:
+        json.exit
 
-    """Define New student info"""
-    new_student_info = {  
-        "F_Name": 'Weihao', 
-        "L_Name": 'Fu', 
-        "Student_ID": 123456, 
-        "Email": "abcwf@gmail.com" }
 
-    Read_Student_File(fileName)
-    print("You have successfully read the file")
-    Append_Student_File(fileName, new_student_info)
-    print("You have successfully append the new student to the existing file")
 
