@@ -20,7 +20,6 @@ except ImportError:
 # Set up the constants:
 WIDTH = 75
 HEIGHT = 22
-
 TREE = 'A'
 FIRE = '@'
 EMPTY = ' '
