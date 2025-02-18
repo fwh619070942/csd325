@@ -1,0 +1,12 @@
+django-admin startproject demo   => create a project
+
+python3 manage.py startapp myapp => start application
+
+python3 manage.py runserver  => run server
+
+python3 manage.py makemigrations   => everytime when you make any single changes to the db
+python3 manage.py migrate     => is to apply the migrates and update the db for you
+
+
+python3 manage.py createsuperuser => pop up the username and password
+
